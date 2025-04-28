@@ -6,3 +6,100 @@ Official repository for paper titled "GCN-Transformer: Multi-task Graph Convolut
 The code for this paper will be made available soon.
 
 For inquiries, please contact rsajina@unipu.hr
+
+## Getting Started
+
+Clone the repo:
+
+```
+git clone https://github.com/RomeoSajina/GCN-Transformer.git
+```
+
+(Optional) Create a Conda environment:
+```
+conda create -n gcn-transformer python=3.8
+```
+
+Install the requirements using `pip`:
+```
+pip install -r requirements.txt
+```
+
+### Requirements
+
+- torch==1.13.1
+- numpy==1.24.4
+- scipy==1.10.0
+- einops==0.6.1
+
+
+## Data
+
+First, create a `data/` folder in the repo root directory. We expect the following structure:
+```
+data/
+    3dpw/
+        sequenceFiles/
+            test/
+            train/
+            validation/
+    somof_data_3dpw/
+        3dpw_test_frames_in.json
+        3dpw_test_in.json
+        ...
+    amass/
+        BioMotionLab_NTroje/
+        BMLmovi/
+        CMU/
+        smpl_skeleton.npz
+    expi/
+        ExPI_mocap_data/
+            acro1/
+                ...
+            acro2/
+                ...
+```
+
+Datasets links:
+- [3DPW](https://virtualhumans.mpi-inf.mpg.de/3DPW/license.html)
+- [SoMoF](https://virtualhumans.mpi-inf.mpg.de/3DPW/licensesmof.html)
+- [AMASS](https://amass.is.tue.mpg.de/)
+- [ExPI](https://team.inria.fr/robotlearn/research/expi-dataset/)
+
+
+
+## Setup and all experiments
+Checkout `Run.ipynb` notebook for all experiments, and `Run_ablation.ipynb` for ablation study
+
+
+## Training
+
+The model is trained with the training script `train.py`:
+```
+python train.py --dataset 3dpw
+```
+
+
+## Evaluation
+We provide a script to evaluate trained GCN-Transformer models. You can run
+```
+python test.py --dataset 3dpw --ckp ./logs/3dpw/best_epoch.pt
+```
+to get these metrics.
+
+
+### Citing
+If you use our code, please cite our work
+
+```
+@article{202503.2002,
+	doi = {10.20944/preprints202503.2002.v1},
+	url = {https://doi.org/10.20944/preprints202503.2002.v1},
+	year = 2025,
+	month = {March},
+	publisher = {Preprints},
+	author = {Romeo Šajina and Goran Oreški and Marina Ivašić-Kos},
+	title = {GCN-Transformer: Multi-task Graph Convolutional Network and Transformer for Multi-Person Pose Forecasting},
+	journal = {Preprints}
+}
+```
