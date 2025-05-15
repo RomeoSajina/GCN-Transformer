@@ -92,14 +92,16 @@ to get these metrics.
 If you use our code, please cite our work
 
 ```
-@article{202503.2002,
-	doi = {10.20944/preprints202503.2002.v1},
-	url = {https://doi.org/10.20944/preprints202503.2002.v1},
-	year = 2025,
-	month = {March},
-	publisher = {Preprints},
-	author = {Romeo Šajina and Goran Oreški and Marina Ivašić-Kos},
-	title = {GCN-Transformer: Multi-task Graph Convolutional Network and Transformer for Multi-Person Pose Forecasting},
-	journal = {Preprints}
+@Article{sajina25103136,
+AUTHOR = {Šajina, Romeo and Oreški, Goran and Ivašić-Kos, Marina},
+TITLE = {GCN-Transformer: Graph Convolutional Network and Transformer for Multi-Person Pose Forecasting Using Sensor-Based Motion Data},
+JOURNAL = {Sensors},
+VOLUME = {25},
+YEAR = {2025},
+NUMBER = {10},
+ARTICLE-NUMBER = {3136},
+URL = {https://www.mdpi.com/1424-8220/25/10/3136},
+ISSN = {1424-8220},
+DOI = {10.3390/s25103136}
 }
 ```
